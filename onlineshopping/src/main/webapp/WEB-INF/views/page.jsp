@@ -31,13 +31,16 @@
 		<!-- Page Content -->
 		<div class="content">
 			<c:if test="${userClicksHome == true}">
-				<%@include file="./pageContent.jsp"%>
+				<%@include file="pageContent.jsp"%>
 			</c:if>
 			<c:if test="${userClicksAbout == true}">
-				<%@include file="./about.jsp"%>
+				<%@include file="about.jsp"%>
 			</c:if>
 			<c:if test="${userClicksContact == true}">
-				<%@include file="./contact.jsp"%>
+				<%@include file="contact.jsp"%>
+			</c:if>
+			<c:if test="${userClicksAllProducts == true or userClicksCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
 			</c:if>
 		</div>
 		<!-- Footer comes here -->
